@@ -1,0 +1,124 @@
+/* variables for sizes etc. */
+
+:root{
+    --ballSize: 200px;
+}
+
+*{
+    margin:0;
+    padding:0;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    color:goldenrod;
+
+}
+
+/* Main - contains the elements in a centered position on page */
+/* Flex let the elemets be stacked centered */
+
+main{
+    display: flex;
+
+    width: 60%;
+    height: auto;
+
+    margin: 0px auto;
+    padding-top: 10%;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Button - is styled for size and look as the forthmost layer (z-index) */
+
+button{
+    z-index: 10;
+
+    background-color: white;
+    border: 2px solid slategray;
+
+    padding: 30px;
+
+    color: slategray;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+button:hover{
+    background-color: slategray;
+    color:white;
+}
+
+/* The ball is styled for size and look - the background-color is changed onclick in script.js */
+/* The ball has a gredient on top that is styled seperately to give it a 3D look '/
+/* The ball shadow is the 'ground' shadow that gives the look of jumping from a surface */
+/* Z-index layering is to make sure that the gradient is above the ball layer and shadow is behind the ball layer */
+/* Sizes for the ball, gradient and shadow correlates so have that in mind when changing the sizes */
+
+.ball{
+    z-index: 1;
+
+    width: var(--ballSize);
+    height: var(--ballSize);
+
+    border-radius: 50%;
+}
+
+.ball--gradient{
+    z-index: 2;
+
+    width: var(--ballSize);
+    height: var(--ballSize);
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle at 60px 50px, #fcfcfc50, rgba(0, 0, 0, 0.50));
+}
+
+.ball--shadow{
+    z-index: -10;
+    width: var(--ballSize);
+    height: calc(var(--ballSize)/4);
+
+    margin-top: -25px;
+
+    border-radius: 50%;
+
+    background-color: rgba(0, 0, 0, 0.363);
+    filter: blur(20px);
+}
+
+
+/* The animation for the ball shadow that scales in timing with the bouncing */
+/* The shadow increase in scale when the ball is jumping */
+/* make sure to keep the timing of theese synched if changed */
+
+.bounce--shadow{
+    z-index: -10;
+    animation: bounce--shadow 2s ease infinite;
+}
+@keyframes bounce--shadow{
+    0%, 20%, 50%, 70%, 90%, 100% {transform: scale(0.5);}
+    40% {transform: scale(.9);}
+    60% {transform: scale(.70);}
+    80% {transform: scale(.6);}
+
+}
+
+/* The animation for the bouncing of the ball */
+/* To give a realistic bouncing effect, three bounces in decreased height is used */
+/* -px is used to make the ball jump up rather than down */
+
+.bounce{
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce{
+    0%, 20%, 50%, 70%, 90%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-100px);}
+    60% {transform: translateY(-50px);}
+    80% {transform: translateY(-25px);}
+}

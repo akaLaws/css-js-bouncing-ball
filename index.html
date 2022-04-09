@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bouncing ball</title>
+
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Main to contain all the elements -->
+    <main>
+        <h1>Bouncing ball animation - with color change</h1>
+
+        <!-- Ball, gradient and boounce animation -->
+        <div class="ball ball--gradient bounce" value="blue"></div>
+
+        <!-- Ball shadow and shadow animation -->
+        <div class="ball--shadow bounce--shadow"></div>
+
+        <!-- Button to change color of the ball -->
+        <div>
+            <button onclick="change()">Change the color</button>
+        </div>
+    </main>
+    
+    <!-- Including the javascript -->
+    <script src="script.js" defer></script>
+</body>
+</html>
