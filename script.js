@@ -7,35 +7,35 @@ document.querySelector('.ball').style.backgroundColor = 'grey';
 // depending on current value of the class.
 
 function change(){
-    let bold = document.querySelector('.ball');
+    let ball = document.querySelector('.ball');
 
-    switch(bold.value){
+    switch(ball.value){
         case 'blue':
-            bold.style.backgroundColor = 'red';
-            bold.value = 'red';
+            ball.style.backgroundColor = 'red';
+            ball.value = 'red';
             break;
         case 'red':
-            bold.style.backgroundColor = 'green';
-            bold.value = 'green';
+            ball.style.backgroundColor = 'green';
+            ball.value = 'green';
             break;
         case 'green':
-            bold.style.backgroundColor = 'purple';
-            bold.value = 'purple';
+            ball.style.backgroundColor = 'purple';
+            ball.value = 'purple';
             break;
         case 'purple':
-            bold.style.backgroundColor = 'yellow';
-            bold.value = 'yellow';
+            ball.style.backgroundColor = 'yellow';
+            ball.value = 'yellow';
             break;
         case 'yellow':
-            bold.style.backgroundColor = 'teal';
-            bold.value = 'teal';
+            ball.style.backgroundColor = 'teal';
+            ball.value = 'teal';
             break;
         case 'teal':
-            bold.style.backgroundColor = 'blue';
-            bold.value = 'blue';
+            ball.style.backgroundColor = 'blue';
+            ball.value = 'blue';
             break;
         default:
-            bold.value = 'blue';
+            ball.value = 'blue';
             break;
     };
 }

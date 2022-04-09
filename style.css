@@ -2,6 +2,7 @@
 
 :root{
     --ballSize: 200px;
+    --animationProperty: 1.5s ease infinite;
 }
 
 *{
@@ -29,6 +30,10 @@ main{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+}
+
+h1{
+    padding-bottom: 5%;
 }
 
 /* Button - is styled for size and look as the forthmost layer (z-index) */
@@ -98,7 +103,7 @@ button:hover{
 
 .bounce--shadow{
     z-index: -10;
-    animation: bounce--shadow 2s ease infinite;
+    animation: bounce--shadow var(--animationProperty);
 }
 @keyframes bounce--shadow{
     0%, 20%, 50%, 70%, 90%, 100% {transform: scale(0.5);}
@@ -113,7 +118,7 @@ button:hover{
 /* -px is used to make the ball jump up rather than down */
 
 .bounce{
-    animation: bounce 2s ease infinite;
+    animation: bounce var(--animationProperty);
 }
 
 @keyframes bounce{
