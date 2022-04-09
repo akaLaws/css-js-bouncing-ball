@@ -1,7 +1,7 @@
 # css-js-bouncing-ball
 A bouncing ball that changes color when button is clicked - a hit with 3 year olds when you want to show what mom does for work.
 
-##Usefullness
+## Usefulness
 Can be used as an introduction and a fun small assignment in combining CSS and Javascript.
 It can be downloaded and altered or be used as inspiration for making something similiair from scratch.
 
@@ -17,5 +17,6 @@ It can be downloaded and altered or be used as inspiration for making something 
 * JS switch case
 * LOTS of comments 
 
-Have fun 🤘
+
+### Have fun 🤘
 *-Sarah-Elizabeth*
